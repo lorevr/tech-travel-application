@@ -1,4 +1,6 @@
-# Tienda de viajes - Tech Travel + carrito
+# Lorena Valencia Ruiz
+
+## Tienda de viajes - Tech Travel + carrito
 
 Tienda de viajes programada en con React
 
