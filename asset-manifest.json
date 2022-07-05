@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/tech-travel-application/static/js/main.fb92d050.js",
+    "static/media/logo.svg": "/tech-travel-application/static/media/logo.df667a445c1fa13181933f0bf6ae1e28.svg",
+    "index.html": "/tech-travel-application/index.html",
+    "main.fb92d050.js.map": "/tech-travel-application/static/js/main.fb92d050.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.fb92d050.js"
+  ]
+}
