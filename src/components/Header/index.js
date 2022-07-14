@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import CartContext from "../../context/cart";
 import logo from "../../assets/logo.svg";
@@ -7,26 +7,32 @@ import logo from "../../assets/logo.svg";
 import { Container, HeaderContainer, Cart } from "./styles";
 
 function Header() {
-  const { setState, state } = useContext(CartContext);
+  const { state } = useContext(CartContext);
 
   const totalQuantity = state.cart.reduce(
     (acc, travel) => acc + travel.quantity,
     0
   );
+
   return (
     <Container>
       <HeaderContainer>
-        <Link to="/">
+        <NavLink to="/">
           <img src={logo} alt="logo" />
-        </Link>
-        <Link to="/cart">
+        </NavLink>
+        <NavLink
+          to="/cart"
+          style={({ isActive }) => ({
+            display: isActive ? "none" : "block",
+          })}
+        >
           <Cart>
             <div>
               <span>{totalQuantity}</span>
             </div>
             <FaShoppingCart size={36} color="#fff" />
           </Cart>
-        </Link>
+        </NavLink>
       </HeaderContainer>
     </Container>
   );
